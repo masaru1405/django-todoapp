@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.id == task.user_id %}
+   <div class="header-bar">
+      <h1>Task: {{task}}</h1>
+      
+   </div>
+
+   <h3>Description</h3>
+   <p>{{task.description}}</p>
+
+   <h3>Complete</h3>
+   <p style="padding-bottom: 15px;">{{task.complete}}</p>
+   
+
+
+   <div>
+      <a class="button" href="{% url 'tasks' %}"> Back</a>
+      <a class="button" href="{% url 'task-update' task.id %}" style="margin-left: 10px;">Edit</a>
+   </div>
+
+   <br>
+{% else %}
+   <div class="header-bar">
+      <a href="{% url 'tasks' %}">&#8592; Back</a>
+   </div>
+   <h4 style="margin-top: 25px;">You're not allowed here! (and you know it...)</h4>
+{% endif %}
+
+
+{% endblock %}

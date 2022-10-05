@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header-bar">
+   <a href="{% url 'tasks' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body"> 
+   {% if user.id == task.user_id %}
+      <form method="POST">
+         {% csrf_token %}
+         {{form.as_p}}
+         <input class="button" type="submit" value="Submit">
+      </form>
+   {% else %}
+      <h4>You're not allowed here! (and you know it...)</h4>
+   {% endif %}
+</div>
+{% endblock %}
