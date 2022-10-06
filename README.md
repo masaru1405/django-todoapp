@@ -6,10 +6,10 @@
 Um simples aplicativo de gerenciamento de tarefas feito com Django v.4.
 
 ## Funcionalidades :hammer:
--Login e Registro para os usuários.
--Um usuário somente poderá ver e editar suas próprias tarefas.
--Criação, edição e remoção de tarefas.
--No momento não há a possibilidade de colocar a data de vencimento de uma tarefa.
+- Login e Registro para os usuários.
+- Um usuário somente poderá ver e editar suas próprias tarefas.
+- Criação, edição e remoção de tarefas.
+- No momento não há a possibilidade de colocar a data de vencimento de uma tarefa.
 
 ## Acesso ao projeto :computer:
 Você pode ver o projeto rodando no seguinte link:
