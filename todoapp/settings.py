@@ -123,6 +123,10 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+if not DEBUG: #se em produção
+    STATIC_ROOT = BASE_DIR / 'static'
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
